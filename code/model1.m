@@ -90,7 +90,7 @@ c11 = mean(decay_rate_10-tmp_coff(1)*extention_rate_10)
 c12 = mean(decay_rate_16-tmp_coff(1)*extention_rate_16)
 c13 = mean(decay_rate_22-tmp_coff(1)*extention_rate_22)
 c2 = mean(-exp(moistrue_trade_off)+exp(log_D))
-[G,M]=meshgrid(1:11,-1:1); 
+[G,M]=meshgrid(1:0.01:11,-1:0.01:1); 
 D1 = tmp_coff(1)*G-4,75+exp(mosi_coff*M)*5.2292
 D2 = tmp_coff(2)*G-12.0841+exp(mosi_coff*M)*16.4940
 D3 = tmp_coff(3)*G+9.8199+exp(mosi_coff*M)*-17.2108;
@@ -112,6 +112,7 @@ legend('22¡æ','Location','NorthWest')
 xlabel('Hyphal extension rate')
 ylabel('Moisture trade-off')
 zlabel('Decomposition rate')
+
 
 
 

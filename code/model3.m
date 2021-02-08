@@ -1,5 +1,4 @@
-clear
-clc
+
 %% 数据读取
 [all_num,txt,raw] = xlsread('fungus_data_2.xlsx');
 moistrue_trade_off = all_num(2:35,1);
@@ -55,70 +54,70 @@ hold off
 %假设不考虑温度，湿度，抗湿度的影响
 % T=16摄氏度
 
-% h=0.1
-% %二元种内竞争 slope1 slope2 slope11 slope12 slope13 slope14
-% ts=[0:h:30]
-% figure
-% decay_rate_16_under_competiton_s1=2.24708*slope1-5.8201
-% decay_rate_16_under_competiton_s2=2.24708*slope2-5.8201
-% decay_rate_16_under_nocompetition_s1=2.24708*slope11-5.8201
-% decay_rate_16_under_nocompetition_s2=2.24708*slope14-5.8201
-% 
-% for i=1:299
-%     if decay_rate_16_under_competiton_s1(i)<0
-%         decay_rate_16_under_competiton_s1(i)=0
-%     end
-%     if decay_rate_16_under_competiton_s2(i)<0
-%         decay_rate_16_under_competiton_s2(i)=0
-%     end
-%     if decay_rate_16_under_nocompetition_s1(i)<0
-%         decay_rate_16_under_nocompetition_s1(i)=0
-%     end
-%     if decay_rate_16_under_nocompetition_s2(i)<0
-%         decay_rate_16_under_nocompetition_s2(i)=0
-%     end
-% end
-% decay_rate_16_under_competition = decay_rate_16_under_competiton_s1+decay_rate_16_under_competiton_s2
-% hold on
-% plot(ts(1:299),decay_rate_16_under_competition,'r','LineWidth',2)
-% plot(ts(1:299),decay_rate_16_under_nocompetition_s1,'b','LineWidth',2)
-% plot(ts(1:299),decay_rate_16_under_nocompetition_s2,'g','LineWidth',2)
-% legend('mix','AGF C6D','AGE A6F','Location','best')
-% xlabel('Time/day');
-% ylabel('Decomposition rate/%');
-% hold off
-% 
-% %二元内不同种族竞争
-% ts=[0:h:10]
-% figure
-% decay_rate_16_under_competiton_s1=2.24708*slope3-5.8201
-% decay_rate_16_under_competiton_s2=2.24708*slope4-5.8201
-% decay_rate_16_under_nocompetition_s1=2.24708*slope15-5.8201
-% decay_rate_16_under_nocompetition_s2=2.24708*slope18-5.8201
-% 
-% for i=1:99
-%     if decay_rate_16_under_competiton_s1(i)<0
-%         decay_rate_16_under_competiton_s1(i)=0
-%     end
-%     if decay_rate_16_under_competiton_s2(i)<0
-%         decay_rate_16_under_competiton_s2(i)=0
-%     end
-%     if decay_rate_16_under_nocompetition_s1(i)<0
-%         decay_rate_16_under_nocompetition_s1(i)=0
-%     end
-%     if decay_rate_16_under_nocompetition_s2(i)<0
-%         decay_rate_16_under_nocompetition_s2(i)=0
-%     end
-% end
-% decay_rate_16_under_competition = decay_rate_16_under_competiton_s1+decay_rate_16_under_competiton_s2
-% hold on
-% plot(ts(1:99),decay_rate_16_under_competition,'r','LineWidth',2)
-% plot(ts(1:99),decay_rate_16_under_nocompetition_s1,'b','LineWidth',2)
-% plot(ts(1:99),decay_rate_16_under_nocompetition_s2,'g','LineWidth',2)
-% legend('mix','FFT A3E','HCH B2B','Location','best')
-% xlabel('Time/day');
-% ylabel('Decomposition rate/%');
-% hold off
+h=0.1
+%二元种内竞争 slope1 slope2 slope11 slope12 slope13 slope14
+ts=[0:h:30]
+figure
+decay_rate_16_under_competiton_s1=2.24708*slope1-5.8201
+decay_rate_16_under_competiton_s2=2.24708*slope2-5.8201
+decay_rate_16_under_nocompetition_s1=2.24708*slope11-5.8201
+decay_rate_16_under_nocompetition_s2=2.24708*slope14-5.8201
+
+for i=1:299
+    if decay_rate_16_under_competiton_s1(i)<0
+        decay_rate_16_under_competiton_s1(i)=0
+    end
+    if decay_rate_16_under_competiton_s2(i)<0
+        decay_rate_16_under_competiton_s2(i)=0
+    end
+    if decay_rate_16_under_nocompetition_s1(i)<0
+        decay_rate_16_under_nocompetition_s1(i)=0
+    end
+    if decay_rate_16_under_nocompetition_s2(i)<0
+        decay_rate_16_under_nocompetition_s2(i)=0
+    end
+end
+decay_rate_16_under_competition = decay_rate_16_under_competiton_s1+decay_rate_16_under_competiton_s2
+hold on
+plot(ts(1:299),decay_rate_16_under_competition,'r','LineWidth',2)
+plot(ts(1:299),decay_rate_16_under_nocompetition_s1,'b','LineWidth',2)
+plot(ts(1:299),decay_rate_16_under_nocompetition_s2,'g','LineWidth',2)
+legend('mix','AGF C6D','AGE A6F','Location','best')
+xlabel('Time/day');
+ylabel('Decomposition rate/%');
+hold off
+
+%二元内不同种族竞争
+ts=[0:h:10]
+figure
+decay_rate_16_under_competiton_s1=2.24708*slope3-5.8201
+decay_rate_16_under_competiton_s2=2.24708*slope4-5.8201
+decay_rate_16_under_nocompetition_s1=2.24708*slope15-5.8201
+decay_rate_16_under_nocompetition_s2=2.24708*slope18-5.8201
+
+for i=1:99
+    if decay_rate_16_under_competiton_s1(i)<0
+        decay_rate_16_under_competiton_s1(i)=0
+    end
+    if decay_rate_16_under_competiton_s2(i)<0
+        decay_rate_16_under_competiton_s2(i)=0
+    end
+    if decay_rate_16_under_nocompetition_s1(i)<0
+        decay_rate_16_under_nocompetition_s1(i)=0
+    end
+    if decay_rate_16_under_nocompetition_s2(i)<0
+        decay_rate_16_under_nocompetition_s2(i)=0
+    end
+end
+decay_rate_16_under_competition = decay_rate_16_under_competiton_s1+decay_rate_16_under_competiton_s2
+hold on
+plot(ts(1:99),decay_rate_16_under_competition,'r','LineWidth',2)
+plot(ts(1:99),decay_rate_16_under_nocompetition_s1,'b','LineWidth',2)
+plot(ts(1:99),decay_rate_16_under_nocompetition_s2,'g','LineWidth',2)
+legend('mix','FFT A3E','HCH B2B','Location','best')
+xlabel('Time/day');
+ylabel('Decomposition rate/%');
+hold off
 
 
 %% 生长速率随着湿度变化的影响
