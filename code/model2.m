@@ -53,7 +53,7 @@ end
 plot(t(1:299),slope1,'r',t(1:299),slope2,'b','LineWidth',2),grid;
 legend(label1_name,label2_name,'Location','NorthEast');
 xlabel('Time/day');
-ylabel('Extention Rate/mm\cdot day^{-1}');
+ylabel('Hyphal extentsion Rate/mm\cdot day^{-1}');
 
 x0=[10,0]
 slope11=[1,299];
@@ -101,7 +101,7 @@ end
 plot(t(1:99),slope3,'r',t(1:99),slope4,'b','LineWidth',2),grid;
 legend(label1_name,label2_name,'Location','NorthEast');
 xlabel('Time/day');
-ylabel('Extention Rate/mm\cdot day^{-1}');
+ylabel('Hyphal extentsion Rate/mm\cdot day^{-1}');
 x0=[10,0]
 slope15=[1,99];
 slope16=[1,99];
@@ -159,7 +159,7 @@ end
 plot(t(1:299),slope5,'r',t(1:299),slope6,'b',t(1:299),slope7,'k','LineWidth',2),grid;
 legend(label1_name,label2_name,label3_name,'Location','NorthEast');
 xlabel('Time/day');
-ylabel('Extention Rate/mm\cdot day^{-1}');
+ylabel('Hyphal extentsion Rate/mm\cdot day^{-1}');
 
 ts=[0:h:10];%时间区间
 figure
@@ -196,5 +196,5 @@ end
 plot(t(1:99),slope8,'r',t(1:99),slope9,'b',t(1:99),slope10,'k','LineWidth',2),grid;
 legend(label1_name,label2_name,label3_name,'Location','NorthEast');
 xlabel('Time/day');
-ylabel('Extention Rate/mm\cdot day^{-1}');
+ylabel('Hyphal extentsion Rate/mm\cdot day^{-1}');
 

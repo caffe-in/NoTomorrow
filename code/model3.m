@@ -14,8 +14,8 @@ name_list=txt(:,1)
 
 subplot(1,3,1)
 hold on
-xlabel('moistrue trade off/ Mpa')
-ylabel('extention rate/ mm\cdot day^{-1}')
+xlabel('moisture trade off/ Mpa')
+ylabel('Hyphal extentsion rate/ mm\cdot day^{-1}')
 plot(moistrue_trade_off,extention_rate_10,'r.','MarkerSize',15)
 ln_ex_rate_10=log(extention_rate_10);
 ME_coff_10=polyfit(moistrue_trade_off,extention_rate_10,2);
@@ -27,8 +27,8 @@ hold off
 %16…„ œ∂»
 subplot(1,3,2)
 hold on
-xlabel('moistrue trade off/ Mpa')
-ylabel('extention rate/ mm\cdot day^{-1}')
+xlabel('moisture trade off/ Mpa')
+ylabel('Hyphal extentsion rate/ mm\cdot day^{-1}')
 plot(moistrue_trade_off,extention_rate_16,'b.','MarkerSize',15)
 ln_ex_rate_16=log(extention_rate_16);
 ME_coff_16=polyfit(moistrue_trade_off,extention_rate_16,2);
@@ -40,8 +40,8 @@ hold off
 %22…„ œ∂»
 subplot(1,3,3)
 hold on
-xlabel('moistrue trade off/ Mpa')
-ylabel('extention rate/ mm\cdot day^{-1}')
+xlabel('moisture trade off/ Mpa')
+ylabel('Hyphal extentsion rate/ mm\cdot day^{-1}')
 plot(moistrue_trade_off,extention_rate_22,'g.','MarkerSize',15)
 ln_ex_rate_22=log(extention_rate_22);
 ME_coff_22=polyfit(moistrue_trade_off,extention_rate_22,2);
@@ -136,7 +136,7 @@ figure
 hold on
 k=3
 xlabel('Humidity/Mpa')
-ylabel('extention rate/ mm\cdot day^{-1}')
+ylabel('Hyphal extentsion rate/ mm\cdot day^{-1}')
 for i=1:k
     G_M_at_mosi_tf=polyval(ME_coff_16,moistrue_trade_off(i));
     water_max=water_max_list(i);
@@ -170,7 +170,7 @@ figure
 hold on
 k=3;
 xlabel('Temperature/°Ê')
-ylabel('Extention rate/ mm\cdot day^{-1}')
+ylabel('Hyphal extentsion rate/ mm\cdot day^{-1}')
 for i=1:k
     G_M_at_tp=GM_at_tp_list(i);
     tp_at_max_GM=tp_at_max_GM_list(i);
@@ -211,7 +211,7 @@ for k=1:3
     mesh(mesh_x,mesh_y,extention_rate_mix')
     xlabel('Temperature/°Ê')
     ylabel('Humidity/Mpa')
-    zlabel('Extention rate/ mm\cdot day^{-1}')
+    zlabel('Hyphal extentsion rate/ mm\cdot day^{-1}')
     legend(name_list(k+1),'Location','best')
     extention_rate_misHM=extention_rate_misHM+extention_rate_mix;
 end
